@@ -59,7 +59,7 @@ public class DocumentManagementServiceImpl implements DocumentManagementService 
         try (FileOutputStream fos = new FileOutputStream(convertedFile)) {
             fos.write(file.getBytes());
         } catch (IOException e) {
-            log.error("Error converting multipart file to file", e);
+            log.error("Error converting multipartFile to file", e);
         }
         return convertedFile;
     }
